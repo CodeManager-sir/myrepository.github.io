@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head><!--头部-->
+		<meta charset="utf-8" /><!--防止页面乱码-->
+		<title>梦幻西游</title><!--标题-->
+		<style>
+			/*CSS代码 装饰*/
+			body{
+				background-image: url(img/bac.webp);
+			}
+			.box{
+				width: 760px;/*宽*/
+				height: 250px;/*高*/
+				/*background-color: green;*/
+				margin: 300px auto;/*外边距:上下;左右(自动居中)*/
+			}
+			.west{
+				width: 25%;/*1/4  190px*/
+				height: 100%;
+				/*background-color: pink;*/
+				/*元素分类 块元素  霸道*/
+				float:left;/*竖排变横排*/
+				background-position-y: center;/*垂直居中*/
+				background-repeat: no-repeat;/*不重复*/
+			}
+			.west01{
+				background-image: url(img/west_01.png);
+				/*播放动画 动画名 时间 脚步 次数*/
+				animation: swk 1.4s steps(8) infinite;
+			}
+			.west02{
+				background-image: url(img/west_02.png);
+			}
+			.west03{
+				background-image: url(img/west_03.png);
+			}
+			.west04{
+				background-image: url(img/west_04.png);
+			}
+			/*CSS3动画 关键帧*/
+			@keyframes swk{
+				0%{
+					/*动画开始*/
+					background-position-x: 0px;
+				}
+				100%{
+					/*动画结束*/
+					background-position-x: -1600px;
+				}
+			}
+		</style>
+	</head>
+	<body><!--身体 展现给用户看的东西-->
+		<!--盒子 矩形区域 长方形
+			命名规范:英文名字 见名之意
+			大小(宽高)
+		-->
+		<div class="box">
+			<div class="west west01"></div>
+			<div class="west west02"></div>
+			<div class="west west03"></div>
+			<div class="west west04"></div>
+		</div>
+	</body>
+</html>
+<!--代码注释
+	1 实现静态页面 V
+		背景图片 V 
+		盒子装四个人物 V
+		四个人物分别用盒子装起来 V 并且设置背景图片
+	2 人物开始走动
+-->
